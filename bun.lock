@@ -4,14 +4,14 @@
     "": {
       "name": "info",
       "dependencies": {
-        "html2pdf.js": "0.9.0",
+        "html2pdf.js": "0.9.0"
       },
       "devDependencies": {
         "@emailjs/browser": "^4.4.1",
         "typescript": "^5.8.3",
-        "vite": "^6.3.5",
-      },
-    },
+        "vite": "^6.3.5"
+      }
+    }
   },
   "packages": {
     "@emailjs/browser": ["@emailjs/browser@4.4.1", "", {}, "sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg=="],
@@ -318,6 +318,6 @@
 
     "jspdf/html2canvas/css-line-break": ["css-line-break@1.0.1", "", { "dependencies": { "base64-arraybuffer": "^0.1.5" } }, "sha512-Y/Us0vILnzQj21UxqoZTLaHGrePQKXcZygQIoxNmpII06LJVCgB2sFKmD7PItNDHIAqHWjrmJPVohIywWYKAmQ=="],
 
-    "jspdf/html2canvas/css-line-break/base64-arraybuffer": ["base64-arraybuffer@0.1.5", "", {}, "sha512-437oANT9tP582zZMwSvZGy2nmSeAb8DW2me3y+Uv1Wp2Rulr8Mqlyrv3E7MLxmsiaPSMMDmiDVzgE+e8zlMx9g=="],
+    "jspdf/html2canvas/css-line-break/base64-arraybuffer": ["base64-arraybuffer@0.1.5", "", {}, "sha512-437oANT9tP582zZMwSvZGy2nmSeAb8DW2me3y+Uv1Wp2Rulr8Mqlyrv3E7MLxmsiaPSMMDmiDVzgE+e8zlMx9g=="]
   }
 }
