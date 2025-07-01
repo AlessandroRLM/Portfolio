@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessandro López Medina - Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/styles.css">
+</head>
+
+<body>
+  <!-- Mensaje de confirmación -->
+  <div class="form-message" id="formMessage"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">AlessandroLM</a>
+
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#fortalezas" class="nav-link">Fortalezas</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#inicio" class="mobile-nav-link">Inicio</a>
+        <a href="#fortalezas" class="mobile-nav-link">Fortalezas</a>
+        <a href="#habilidades" class="mobile-nav-link">Habilidades</a>
+        <a href="#proyectos" class="mobile-nav-link">Proyectos</a>
+        <a href="#contacto" class="mobile-nav-link">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="app">
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header scroll-offset" id="inicio">
+        <div class="header-content">
+          <div class="profile-image">
+            <div class="status-indicator"></div>
+          </div>
+
+          <div class="profile-info">
+            <h1 class="name">Alessandro López Medina</h1>
+            <p class="title">Ingeniero Civil en Informática</p>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                ✉️ alessandro.lopez.medina1@gmail.com
+              </div>
+              <div class="contact-item">
+                📍 Chile
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Strengths Section -->
+        <section class="section scroll-offset" id="fortalezas">
+          <div class="section-header">
+            <div class="section-icon" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+              🚀
+            </div>
+            <div>
+              <h2 class="section-title">Fortalezas Profesionales</h2>
+              <p class="section-subtitle">Estas son las competencias que me definen como profesional y que aporto a cada
+                proyecto</p>
+            </div>
+          </div>
+
+          <div class="strengths-grid">
+            <div class="strength-card">
+              <div class="strength-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                🧠
+              </div>
+              <h3 class="strength-title">Pensamiento Analítico</h3>
+              <p class="strength-description">Capacidad excepcional para descomponer problemas complejos y encontrar
+                soluciones eficientes mediante análisis estructurado.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+                💡
+              </div>
+              <h3 class="strength-title">Proactividad e Innovación</h3>
+              <p class="strength-description">Siempre busco maneras de optimizar procesos y implementar mejoras
+                continuas
+                antes de que se presenten problemas.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                🎓
+              </div>
+              <h3 class="strength-title">Entusiasmo por el Aprendizaje</h3>
+              <p class="strength-description">Pasión constante por adquirir nuevos conocimientos y mantenerme
+                actualizado
+                con las últimas tecnologías del sector.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section scroll-offset" id="habilidades">
+          <div class="section-header">
+            <div class="section-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+              💻
+            </div>
+            <div>
+              <h2 class="section-title">Habilidades Técnicas</h2>
+              <p class="section-subtitle">Stack tecnológico y herramientas que domino para crear soluciones robustas</p>
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">💻</div>
+                <h3 class="category-title">Lenguajes de Programación</h3>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">TypeScript</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Dart</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <span class="skill-level level-basic">Básico</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">🌐</div>
+                <h3 class="category-title">Frameworks & Tecnologías</h3>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">Django/DRF</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React + TanStack</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Flutter</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">🗄️</div>
+                <h3 class="category-title">Bases de Datos & Cloud</h3>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">PostgreSQL</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-level level-intermediate">Intermedio</span>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">AWS S3</span>
+                <span class="skill-level level-basic">Basico</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <div class="category-header">
+                <div class="category-icon">🗣️</div>
+                <h3 class="category-title">Idiomas</h3>
+              </div>
+
+              <div class="skill-item">
+                <span class="skill-name">Inglés</span>
+                <span class="skill-level level-advanced">Avanzado</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+              🔄
+            </div>
+            <div>
+              <h2 class="section-title">Habilidades Blandas</h2>
+              <p class="section-subtitle">Competencias interpersonales que facilitan la colaboración y el liderazgo</p>
+            </div>
+          </div>
+
+          <div class="soft-skills-container">
+            <div class="soft-skill" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+              🔄 Adaptabilidad
+            </div>
+            <div class="soft-skill" style="background: linear-gradient(135deg, #ec4899, #be185d);">
+              💝 Empatía
+            </div>
+            <div class="soft-skill" style="background: linear-gradient(135deg, #10b981, #059669);">
+              🤝 Trabajo en Equipo
+            </div>
+            <div class="soft-skill" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+              💬 Comunicación Efectiva
+            </div>
+          </div>
+        </section>
+
+        <!-- Value Proposition Section -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+              ⭐
+            </div>
+            <div>
+              <h2 class="section-title">Propuesta de Valor</h2>
+              <p class="section-subtitle">El valor único que aporto a tu organización y cómo puedo impulsar tu
+                crecimiento
+              </p>
+            </div>
+          </div>
+
+          <div class="value-flex">
+            <div class="value-items">
+              <div class="value-item">
+                <div class="value-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                  ⚙️
+                </div>
+                <div class="value-content">
+                  <h4>Optimizo Procesos Empresariales</h4>
+                  <p>Desarrollo sistemas ERP personalizados que automatizan y mejoran la eficiencia operacional.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                  📱
+                </div>
+                <div class="value-content">
+                  <h4>Creo Experiencias Digitales</h4>
+                  <p>Desarrollo aplicaciones web y móviles intuitivas que conectan empresas con usuarios.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                  🧩
+                </div>
+                <div class="value-content">
+                  <h4>Resuelvo Desafíos Complejos</h4>
+                  <p>Transformo requisitos complejos en soluciones tecnológicas robustas y escalables.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section scroll-offset" id="proyectos">
+          <div class="section-header">
+            <div class="section-icon" style="background: linear-gradient(135deg, #f97316, #dc2626);">
+              📂
+            </div>
+            <div>
+              <h2 class="section-title">
+                Proyectos Destacados
+              </h2>
+              <p class="section-subtitle">
+                Descubre algunos de los proyectos destacados en los que he trabajado recientemente.
+              </p>
+            </div>
+          </div>
+          <div class="projects-section">
+            <div class="projects-grid">
+              <div class="project-card">
+                <img src="public/518shots_so.png" alt="Sistema ERP Bazar Matías" class="project-image">
+                <div class="project-info">
+                  <h4 class="project-title">Sistema ERP - Bazar Matías</h4>
+                  <p class="project-description">Sistema completo de gestión empresarial para bazar
+                    con módulos de inventario, ventas, proveedores y administración.</p>
+                </div>
+              </div>
+              <div class="project-card">
+                <img src="public/690shots_so.png" alt="App Wave - Plataforma Musical" class="project-image">
+                <div class="project-info">
+                  <h4 class="project-title">App Wave</h4>
+                  <p class="project-description">Plataforma de streaming musical desarrollada con tecnologías modernas,
+                    ofreciendo una experiencia de usuario fluida y atractiva.</p>
+                </div>
+              </div>
+              <div class="project-card">
+                <img src="public/285shots_so.png" alt="Simulador Clínico" class="project-image">
+                <div class="project-info">
+                  <h4 class="project-title">Registro Clínico Electrónico Simulado</h4>
+                  <p class="project-description">Herramienta educativa para estudiantes de medicina que simula registros
+                    médicos reales para práctica y aprendizaje.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section scroll-offset" id="contacto">
+        <div class="cta-content">
+          <div class="cta-icon">
+            🚀
+          </div>
+
+          <h2 class="cta-title">Listo para construir el futuro digital</h2>
+          <p class="cta-subtitle">de tu empresa</p>
+
+          <p class="cta-description">
+            Transformemos juntos tus ideas en soluciones tecnológicas innovadoras que impulsen
+            el crecimiento y la eficiencia de tu organización.
+          </p>
+
+          <!-- Formulario de Contacto -->
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Empresa</label>
+                  <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Cuéntame sobre tu proyecto</label>
+                <textarea id="message" name="message" rows="4"
+                  placeholder="Describe tu proyecto, objetivos, timeline o cualquier detalle importante..."
+                  required></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="cta-button primary" id="submitBtn">
+                  <span class="btn-text">
+                    <span class="btn-icon">📨</span>
+                    Enviar mensaje
+                  </span>
+                  <span class="btn-loading" style="display: none;">
+                    <span class="spinner"></span>
+                    Enviando...
+                  </span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="cta-footer">
+            <p>💡 ¿Tienes un proyecto en mente? Hablemos y veamos cómo puedo ayudarte a hacerlo realidad</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="module" src="src/main.ts"></script>
+</body>
+
+</html>
