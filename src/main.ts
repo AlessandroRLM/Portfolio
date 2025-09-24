@@ -59,6 +59,16 @@ function applyLanguage() {
     
     // Update document language attribute
     document.documentElement.lang = currentLang;
+
+    // Update resume download link
+    const resumeDownloadLink = document.getElementById('resume-download-link');
+    if (resumeDownloadLink) {
+        if (currentLang === 'es') {
+            resumeDownloadLink.setAttribute('href', './public/Alessandro Lopez CV.pdf');
+        } else {
+            resumeDownloadLink.setAttribute('href', './public/Alessandro Lopez Resume.pdf');
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
