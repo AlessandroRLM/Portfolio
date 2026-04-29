@@ -1,0 +1,381 @@
+/**
+ * Component Styles
+ * Buttons, cards, sections, and form elements
+ */
+
+/* ============================================
+ * BUTTON STYLES
+ * ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.btn-primary {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* ============================================
+ * CARD / PROJECT STYLES
+ * ============================================ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 24px;
+  transition: all 300ms ease;
+}
+
+.card:hover {
+  border-color: var(--fg);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: var(--fg-2);
+  line-height: 1.5;
+}
+
+/* Project card */
+.project-card {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-image {
+  grid-column: span 5;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-info {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.project-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  color: var(--fg-2);
+}
+
+@media (max-width: 900px) {
+  .project-image,
+  .project-info {
+    grid-column: span 12;
+  }
+
+  .project-info {
+    padding-top: 16px;
+  }
+}
+
+/* ============================================
+ * SECTION STYLES
+ * ============================================ */
+section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--fg);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+/* Section header */
+.section-head {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+  padding-bottom: 56px;
+}
+
+.sh-num {
+  grid-column: 1 / span 2;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.sh-num .big {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(56px, 6vw, 88px);
+  color: var(--fg);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin-top: 8px;
+}
+
+.sh-title {
+  grid-column: 4 / span 8;
+  font-weight: 400;
+  font-size: clamp(32px, 4.2vw, 56px);
+  letter-spacing: -0.035em;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .section-head .sh-num,
+  .section-head .sh-title {
+    grid-column: span 12;
+  }
+
+  .section-head .sh-num {
+    padding-bottom: 12px;
+  }
+}
+
+/* Section content */
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+}
+
+/* ============================================
+ * CAPTIONS
+ * ============================================ */
+.caption {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.caption .bar {
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  background: var(--fg-3);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ============================================
+ * STATUS INDICATOR
+ * ============================================ */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: relative;
+}
+
+.status .dot::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  animation: pulse 1.6s ease-out infinite;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+ * FORM STYLES (Contact)
+ * ============================================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  color: var(--fg);
+  transition: border-color 300ms ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--fg);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+}
+
+.form-row .form-group {
+  grid-column: span 6;
+}
+
+@media (max-width: 639px) {
+  .form-row .form-group {
+    grid-column: span 12;
+  }
+}
+
+.form-actions {
+  padding-top: 24px;
+}
+
+.form-message {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.form-message.visible {
+  opacity: 1;
+}
+
+.form-message.success {
+  background: var(--surface);
+  border: 1px solid #10b981;
+  color: #10b981;
+}
+
+.form-message.error {
+  background: var(--surface);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+/* Field validation states */
+.field-valid {
+  border-color: #10b981 !important;
+}
+
+.field-error {
+  border-color: #ef4444 !important;
+}
+
+.field-error-message {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}

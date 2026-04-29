@@ -1,0 +1,98 @@
+{
+  "nav.inicio": "Inicio",
+  "nav.fortalezas": "Fortalezas",
+  "nav.habilidades": "Habilidades",
+  "nav.proyectos": "Proyectos",
+  "nav.contacto": "Contacto",
+  "nav.about": "Sobre mí",
+
+  "hero.title": "Ingeniero Civil en Informática",
+  "hero.years": "15+ años",
+
+  "hero.lede": "Construyo soluciones digitales robustas y escalables que transforman negocios.",
+
+  "contact.linkedin": "LinkedIn",
+  "contact.github": "GitHub",
+  "contact.resume": "Currículum",
+  "contact.email": "alessandro.lopez.medina1@gmail.com",
+  "contact.location": "Chile",
+
+  "strengths.title": "Fortalezas Profesionales",
+  "strengths.subtitle": "Estas son las competencias que me definen como profesional y que aporto a cada proyecto",
+
+  "strength.analytical.title": "Pensamiento Analítico",
+  "strength.analytical.description": "Capacidad excepcional para descomponer problemas complejos y encontrar soluciones eficientes mediante análisis estructurado.",
+
+  "strength.proactivity.title": "Proactividad e Innovación",
+  "strength.proactivity.description": "Siempre busco maneras de optimizar procesos y implementar mejoras continuas antes de que se presenten problemas.",
+
+  "strength.learning.title": "Entusiasmo por el Aprendizaje",
+  "strength.learning.description": "Pasión constante por adquirir nuevos conocimientos y mantenerme actualizado con las últimas tecnologías del sector.",
+
+  "skills.title": "Habilidades Técnicas",
+  "skills.subtitle": "Stack tecnológico y herramientas que domino para crear soluciones robustas",
+
+  "skills.languages": "Lenguajes de Programación",
+  "skills.frameworks": "Frameworks",
+  "skills.technologies": "Tecnologías",
+  "skills.databases": "Bases de Datos & Cloud",
+  "skills.languages.label": "Idiomas",
+
+  "level.advanced": "Avanzado",
+  "level.intermediate": "Intermedio",
+  "level.basic": "Básico",
+  "level.native": "Nativo",
+
+  "softskills.title": "Habilidades Blandas",
+  "softskills.subtitle": "Competencias interpersonales que facilitan la colaboración y el liderazgo",
+
+  "softskills.adaptability": "Adaptabilidad",
+  "softskills.empathy": "Empatía",
+  "softskills.teamwork": "Trabajo en Equipo",
+  "softskills.communication": "Comunicación Efectiva",
+
+  "value.title": "Propuesta de Valor",
+  "value.subtitle": "El valor único que aporto a tu organización y cómo puedo impulsar tu crecimiento",
+
+  "value.optimize": "Optimizo Procesos Empresariales",
+  "value.optimize.desc": "Desarrollo sistemas ERP personalizados que automatizan y mejoran la eficiencia operacional.",
+
+  "value.digital": "Creo Experiencias Digitales",
+  "value.digital.desc": "Desarrollo aplicaciones web y móviles intuitivas que conectan empresas con usuarios.",
+
+  "value.complex": "Resuelvo Desafíos Complejos",
+  "value.complex.desc": "Transformo requisitos complejos en soluciones tecnológicas robustas y escalables.",
+
+  "projects.title": "Proyectos Destacados",
+  "projects.subtitle": "Descubre algunos de los proyectos destacados en los que he trabajado recientemente.",
+  "projects.technologies": "Tecnologías:",
+
+  "project.bazar.title": "Sistema ERP - Bazar Matías",
+  "project.bazar.description": "Sistema completo de gestión empresarial para bazar con módulos de inventario, ventas, proveedores y administración.",
+
+  "project.wave.title": "App Wave",
+  "project.wave.description": "Plataforma de streaming musical desarrollada con tecnologías modernas, ofreciendo una experiencia de usuario fluida y atractiva.",
+
+  "project.rceua.title": "Registro Clínico Electrónico Simulado",
+  "project.rceua.description": "Herramienta educativa para estudiantes de medicina que simula registros médicos reales para práctica y aprendizaje.",
+
+  "cta.title": "Listo para construir el futuro digital",
+  "cta.subtitle": "de tu empresa",
+  "cta.description": "Transformemos juntos tus ideas en soluciones tecnológicas innovadoras que impulsen el crecimiento y la eficiencia de tu organización.",
+
+  "form.name": "Nombre completo",
+  "form.email": "Email",
+  "form.company": "Empresa",
+  "form.phone": "Teléfono",
+  "form.message": "Cuéntame sobre tu proyecto",
+  "form.message.placeholder": "Describe tu proyecto, objetivos, timeline o cualquier detalle importante...",
+  "form.submit": "Enviar mensaje",
+  "form.sending": "Enviando...",
+  "form.success": "Mensaje enviado",
+  "form.error": "Error al enviar el mensaje",
+  "form.validation.name": "Por favor ingresa tu nombre",
+  "form.validation.email": "Por favor ingresa un email válido",
+  "form.validation.message": "Por favor describe tu proyecto",
+
+  "cta.footer": "¿Tienes un proyecto en mente? Hablemos y veamos cómo puedo ayudarte a hacerlo realidad"
+}

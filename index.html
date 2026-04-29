@@ -4,27 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alessandro López Medina - Portfolio</title>
+
+  <!-- Primary Meta Tags -->
+  <title>Alessandro López Medina — Ingeniero Civil en Informática — Portfolio</title>
+  <meta name="title" content="Alessandro López Medina — Ingeniero Civil en Informática — Portfolio">
+  <meta name="description" content="Ingeniero Civil en Informática especializado en desarrollo web, aplicaciones y sistemas empresariales. Stack: Python, TypeScript, Django, React, Flutter.">
+  <meta name="author" content="Alessandro López Medina">
+  <meta name="keywords" content="portfolio, developer, software engineer, Python, TypeScript, Django, React, Flutter, PostgreSQL, full-stack, Chile">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alessandrolopez.dev/">
+  <meta property="og:title" content="Alessandro López Medina — Portfolio">
+  <meta property="og:description" content="Ingeniero Civil en Informática especializado en desarrollo web y aplicaciones modernas.">
+  <meta property="og:image" content="https://alessandrolopez.dev/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AlessandroRLM">
+  <meta name="twitter:title" content="Alessandro López Medina — Portfolio">
+  <meta name="twitter:description" content="Ingeniero Civil en Informática especializado en desarrollo web y aplicaciones modernas.">
+  <meta name="twitter:image" content="https://alessandrolopez.dev/og-image.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://alessandrolopez.dev/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="./src/styles/styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alessandro López Medina",
+    "jobTitle": "Ingeniero Civil en Informática",
+    "url": "https://alessandrolopez.dev",
+    "email": "alessandro.lopez.medina1@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chile",
+      "addressCountry": "CL"
+    },
+    "sameAs": [
+      "https://github.com/AlessandroRLM",
+      "https://www.linkedin.com/in/alessandro-l%C3%B3pez-medina-559393333/"
+    ],
+    "knowsAbout": [
+      "Python",
+      "TypeScript",
+      "Django",
+      "Django REST Framework",
+      "React",
+      "Flutter",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <!-- Mensaje de confirmación -->
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link" data-es="Saltar al contenido principal" data-en="Skip to main content">Saltar al contenido principal</a>
+
+  <!-- Confirmation message -->
   <div class="form-message" id="formMessage"></div>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-container">
       <a href="#inicio" class="nav-logo">AlessandroLM</a>
 
-      <ul class="nav-menu">
+      <ul class="nav-menu" role="menubar">
         <li><a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a></li>
         <li><a href="#fortalezas" class="nav-link" data-es="Fortalezas" data-en="Strengths">Fortalezas</a></li>
         <li><a href="#habilidades" class="nav-link" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
         <li><a href="#proyectos" class="nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
         <li><a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a></li>
-        <li><button id="languageToggle" class="language-toggle">🌐 ES</button></li>
+        <li><button id="languageToggle" class="language-toggle" aria-label="Cambiar idioma">🌐 ES</button></li>
+        <li><button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">☀️</button></li>
       </ul>
 
       <div class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -86,7 +160,7 @@
       </header>
 
       <!-- Main Content -->
-      <main class="main-content">
+      <main class="main-content" id="main-content" role="main">
         <!-- Strengths Section -->
         <section class="section scroll-offset" id="fortalezas">
           <div class="section-header">
@@ -477,7 +551,7 @@
             el crecimiento y la eficiencia de tu organización.
           </p>
 
-          <!-- Formulario de Contacto -->
+          <!-- Contact Form -->
           <div class="contact-form-container">
             <form class="contact-form" id="contactForm">
               <div class="form-row">
@@ -535,6 +609,28 @@
           </div>
         </div>
       </section>
+
+      <!-- Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+          <p class="footer-text">
+            <span data-es="© 2026 Alessandro López Medina. Todos los derechos reservados."
+              data-en="© 2026 Alessandro López Medina. All rights reserved.">© 2026 Alessandro López Medina. Todos los derechos reservados.</span>
+          </p>
+          <div class="footer-links">
+            <a href="https://github.com/AlessandroRLM" target="_blank" rel="noopener noreferrer">
+              <img src="./public/github.svg" class="svg-icon" alt="GitHub"> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/alessandro-l%C3%B3pez-medina-559393333/" target="_blank" rel="noopener noreferrer">
+              <img src="./public/linkedin.svg" class="svg-icon" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="mailto:alessandro.lopez.medina1@gmail.com">
+              <img src="./public/linkedin.svg" class="svg-icon" alt="Email"> Email
+            </a>
+          </div>
+        </div>
+      </footer>
+
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

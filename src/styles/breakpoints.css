@@ -1,0 +1,64 @@
+/**
+ * Breakpoints
+ * Mobile-first media queries
+ * Base: 320px+, Tablet: 640px+, Desktop: 1024px+
+ */
+
+/* ============================================
+ * TABLET (640px)
+ * ============================================ */
+@media (min-width: 640px) {
+  :root {
+    --gutter: 20px;
+    --pad-x: 24px;
+  }
+}
+
+/* ============================================
+ * DESKTOP (1024px)
+ * ============================================ */
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 20px;
+    --pad-x: 36px;
+  }
+}
+
+/* ============================================
+ * RESPONSIVE GRID ADJUSTMENTS
+ * ============================================ */
+
+/* Tablet and below - simplified grid */
+@media (max-width: 900px) {
+  .grid12 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .c1, .c2, .c3 {
+    grid-column: span 6;
+  }
+
+  .c4, .c5 {
+    grid-column: span 6;
+  }
+
+  .c6, .c7 {
+    grid-column: span 6;
+  }
+
+  .c8, .c9, .c10, .c11 {
+    grid-column: span 6;
+  }
+
+  /* Reset column starts */
+  .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10 {
+    grid-column-start: auto;
+  }
+}
+
+/* Mobile only - stacked layout */
+@media (max-width: 639px) {
+  .wrap {
+    padding: 0 16px;
+  }
+}

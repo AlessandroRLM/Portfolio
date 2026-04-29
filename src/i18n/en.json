@@ -1,0 +1,98 @@
+{
+  "nav.inicio": "Home",
+  "nav.fortalezas": "Strengths",
+  "nav.habilidades": "Skills",
+  "nav.proyectos": "Projects",
+  "nav.contacto": "Contact",
+  "nav.about": "About",
+
+  "hero.title": "Civil Computer Engineer",
+  "hero.years": "15+ years",
+
+  "hero.lede": "I build robust and scalable digital solutions that transform businesses.",
+
+  "contact.linkedin": "LinkedIn",
+  "contact.github": "GitHub",
+  "contact.resume": "Resume",
+  "contact.email": "alessandro.lopez.medina1@gmail.com",
+  "contact.location": "Chile",
+
+  "strengths.title": "Professional Strengths",
+  "strengths.subtitle": "These are the competencies that define me as a professional and that I bring to each project",
+
+  "strength.analytical.title": "Analytical Thinking",
+  "strength.analytical.description": "Exceptional ability to break down complex problems and find efficient solutions through structured analysis.",
+
+  "strength.proactivity.title": "Proactivity and Innovation",
+  "strength.proactivity.description": "I always look for ways to optimize processes and implement continuous improvements before problems arise.",
+
+  "strength.learning.title": "Enthusiasm for Learning",
+  "strength.learning.description": "Constant passion for acquiring new knowledge and keeping up to date with the latest technologies in the sector.",
+
+  "skills.title": "Technical Skills",
+  "skills.subtitle": "Technological stack and tools that I master to create robust solutions",
+
+  "skills.languages": "Programming Languages",
+  "skills.frameworks": "Frameworks",
+  "skills.technologies": "Technologies",
+  "skills.databases": "Databases & Cloud",
+  "skills.languages.label": "Languages",
+
+  "level.advanced": "Advanced",
+  "level.intermediate": "Intermediate",
+  "level.basic": "Basic",
+  "level.native": "Native",
+
+  "softskills.title": "Soft Skills",
+  "softskills.subtitle": "Interpersonal skills that facilitate collaboration and leadership",
+
+  "softskills.adaptability": "Adaptability",
+  "softskills.empathy": "Empathy",
+  "softskills.teamwork": "Teamwork",
+  "softskills.communication": "Effective Communication",
+
+  "value.title": "Value Proposition",
+  "value.subtitle": "The unique value I bring to your organization and how I can drive your growth",
+
+  "value.optimize": "I Optimize Business Processes",
+  "value.optimize.desc": "I develop custom ERP systems that automate and improve operational efficiency.",
+
+  "value.digital": "I Create Digital Experiences",
+  "value.digital.desc": "I develop intuitive web and mobile applications that connect businesses with users.",
+
+  "value.complex": "I Solve Complex Challenges",
+  "value.complex.desc": "I transform complex requirements into robust and scalable technological solutions.",
+
+  "projects.title": "Featured Projects",
+  "projects.subtitle": "Discover some of the featured projects I have worked on recently.",
+  "projects.technologies": "Technologies:",
+
+  "project.bazar.title": "ERP System - Bazar Matías",
+  "project.bazar.description": "Complete business management system for bazaar with inventory, sales, suppliers and administration modules.",
+
+  "project.wave.title": "Wave App",
+  "project.wave.description": "Music streaming platform developed with modern technologies, offering a smooth and attractive user experience.",
+
+  "project.rceua.title": "Simulated Electronic Clinical Record",
+  "project.rceua.description": "Educational tool for medical students that simulates real medical records for practice and learning.",
+
+  "cta.title": "Ready to build the digital future",
+  "cta.subtitle": "of your company",
+  "cta.description": "Let's transform your ideas together into innovative technological solutions that drive the growth and efficiency of your organization.",
+
+  "form.name": "Full name",
+  "form.email": "Email",
+  "form.company": "Company",
+  "form.phone": "Phone",
+  "form.message": "Tell me about your project",
+  "form.message.placeholder": "Describe your project, objectives, timeline or any important details...",
+  "form.submit": "Send message",
+  "form.sending": "Sending...",
+  "form.success": "Message sent",
+  "form.error": "Error sending message",
+  "form.validation.name": "Please enter your name",
+  "form.validation.email": "Please enter a valid email",
+  "form.validation.message": "Please describe your project",
+
+  "cta.footer": "Do you have a project in mind? Let's talk and see how I can help you make it happen"
+}

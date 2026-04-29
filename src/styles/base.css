@@ -1,0 +1,209 @@
+/**
+ * Base Styles
+ * CSS reset, base typography, and layout utilities
+ */
+
+/* ============================================
+ * CSS RESET (minimal)
+ * ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+ * BASE TYPOGRAPHY
+ * ============================================ */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.4;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background 300ms, color 300ms;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(56px, 12vw, 200px);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(32px, 4.2vw, 56px);
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+ * LAYOUT UTILITIES
+ * ============================================ */
+
+/* Container */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  position: relative;
+}
+
+/* 12-column Grid */
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gutter);
+}
+
+/* Column spans */
+.c1 { grid-column: span 1; }
+.c2 { grid-column: span 2; }
+.c3 { grid-column: span 3; }
+.c4 { grid-column: span 4; }
+.c5 { grid-column: span 5; }
+.c6 { grid-column: span 6; }
+.c7 { grid-column: span 7; }
+.c8 { grid-column: span 8; }
+.c9 { grid-column: span 9; }
+.c10 { grid-column: span 10; }
+.c11 { grid-column: span 11; }
+.c12 { grid-column: span 12; }
+
+/* Column start */
+.s1 { grid-column-start: 1; }
+.s2 { grid-column-start: 2; }
+.s3 { grid-column-start: 3; }
+.s4 { grid-column-start: 4; }
+.s5 { grid-column-start: 5; }
+.s6 { grid-column-start: 6; }
+.s7 { grid-column-start: 7; }
+.s8 { grid-column-start: 8; }
+.s9 { grid-column-start: 9; }
+.s10 { grid-column-start: 10; }
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+ * ACCESSIBILITY - Skip Link
+ * ============================================ */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 10000;
+  font-weight: 600;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================
+ * FOOTER
+ * ============================================ */
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  padding: 24px var(--pad-x);
+  margin-top: 48px;
+}
+
+.footer-content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: var(--fg-3);
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--fg-2);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-links .svg-icon {
+  width: 18px;
+  height: 18px;
+}
