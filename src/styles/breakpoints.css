@@ -11,8 +11,8 @@
   }
 }
 
-/* === SUB-798 SAFETY: shrink everything cleanly === */
-@media (max-width: 798px) {
+/* === SUB-900 SAFETY: shrink everything cleanly === */
+@media (max-width: 900px) {
   .wrap {
     padding-inline: var(--pad-x);
   }
