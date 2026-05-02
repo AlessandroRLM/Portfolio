@@ -1,17 +1,36 @@
 /**
  * Internationalization module
  * Handles language switching with localStorage persistence
- * and JSON translation files
+ * using bundled JSON translation files
  */
 
-type Locale = 'es' | 'en';
-type Translations = Record<string, string>;
+import esTranslations from "../i18n/es.json";
+import enTranslations from "../i18n/en.json";
 
-const STORAGE_KEY = 'portfolio-locale';
+/**
+ * Const Types Pattern for Locales
+ */
+export const LOCALE = {
+  ES: "es",
+  EN: "en",
+} as const;
 
-let currentLocale: Locale = 'es';
-let translations: Translations = {};
-let translationsLoaded = false;
+export type Locale = (typeof LOCALE)[keyof typeof LOCALE];
+
+/**
+ * Type-safe translation storage
+ */
+export type Translations = Record<string, string>;
+
+const TRANSLATIONS: Record<Locale, Translations> = {
+  [LOCALE.ES]: esTranslations as Translations,
+  [LOCALE.EN]: enTranslations as Translations,
+};
+
+const STORAGE_KEY = "portfolio-locale";
+
+let currentLocale: Locale = LOCALE.ES;
+let isInitialized = false;
 
 /**
  * Get stored locale from localStorage
@@ -19,80 +38,41 @@ let translationsLoaded = false;
  */
 function getStoredLocale(): Locale {
   const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === 'es' || stored === 'en') {
+  if (stored === LOCALE.ES || stored === LOCALE.EN) {
     return stored;
   }
-  return 'es';
+  return LOCALE.ES;
 }
 
 /**
  * Get current locale
  */
-function getLocale(): Locale {
+export function getLocale(): Locale {
   return currentLocale;
 }
 
 /**
- * Load translations for a locale
- */
-async function loadTranslations(locale: Locale): Promise<void> {
-  try {
-    const response = await fetch(`/src/i18n/${locale}.json`);
-    if (!response.ok) {
-      throw new Error(`Failed to load translations: ${response.status}`);
-    }
-    translations = await response.json();
-    currentLocale = locale;
-    translationsLoaded = true;
-    
-    // Update HTML lang attribute
-    document.documentElement.lang = locale;
-  } catch (error) {
-    console.error('Error loading translations:', error);
-    // Keep existing translations if fetch fails
-    if (!translationsLoaded && locale === 'es') {
-      // Fallback to inline translations (minimal set)
-      translations = getInlineTranslations();
-      translationsLoaded = true;
-    }
-  }
-}
-
-/**
- * Get inline fallback translations (minimal set for offline/error cases)
- */
-function getInlineTranslations(): Translations {
-  return {
-    'nav.inicio': currentLocale === 'es' ? 'Inicio' : 'Home',
-    'nav.fortalezas': currentLocale === 'es' ? 'Fortalezas' : 'Strengths',
-    'nav.habilidades': currentLocale === 'es' ? 'Habilidades' : 'Skills',
-    'nav.proyectos': currentLocale === 'es' ? 'Proyectos' : 'Projects',
-    'nav.contacto': currentLocale === 'es' ? 'Contacto' : 'Contact',
-    'form.success': currentLocale === 'es' ? 'Mensaje enviado' : 'Message sent',
-    'form.error': currentLocale === 'es' ? 'Error al enviar' : 'Error sending'
-  };
-}
-
-/**
  * Translate a key
- * @param key - Dot-notation key (e.g., 'nav.inicio')
+ * @param key - Key in translation files
  * @param fallback - Optional fallback if key not found
  */
-function t(key: string, fallback?: string): string {
-  if (translations[key]) {
+export function t(key: string, fallback?: string): string {
+  const translations = TRANSLATIONS[currentLocale];
+  if (translations && translations[key]) {
     return translations[key];
   }
-  
+
   return fallback || key;
 }
 
 /**
  * Set locale and update all translatable elements
  */
-async function setLocale(locale: Locale): Promise<void> {
-  await loadTranslations(locale);
+export async function setLocale(locale: Locale): Promise<void> {
+  currentLocale = locale;
+  document.documentElement.lang = locale;
   localStorage.setItem(STORAGE_KEY, locale);
-  
+
   // Update all elements with data-i18n attribute
   updateDOMTranslations();
 }
@@ -100,9 +80,10 @@ async function setLocale(locale: Locale): Promise<void> {
 /**
  * Update all DOM elements with translations
  */
-function updateDOMTranslations(): void {
-  document.querySelectorAll<HTMLElement>('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+export function updateDOMTranslations(): void {
+  // Update standard text elements
+  document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
     if (key) {
       const translated = t(key);
       if (translated !== key) {
@@ -110,76 +91,53 @@ function updateDOMTranslations(): void {
       }
     }
   });
-  
+
   // Update placeholders
-  document.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (key) {
-      const translated = t(key);
-      if (translated !== key) {
-        el.placeholder = translated;
+  document
+    .querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement
+    >("[data-i18n-placeholder]")
+    .forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (key) {
+        const translated = t(key);
+        if (translated !== key) {
+          el.placeholder = translated;
+        }
       }
-    }
-  });
-  
-  // Also update legacy data-es/data-en attributes for compatibility
-  const allElements = document.querySelectorAll<HTMLElement>('[data-es][data-en]');
-  const currentLang = currentLocale;
-  
-  allElements.forEach(el => {
-    const translatedText = el.getAttribute(`data-${currentLang}`);
+    });
+
+  // Update legacy data-es/data-en attributes for compatibility
+  document.querySelectorAll<HTMLElement>("[data-es][data-en]").forEach((el) => {
+    const translatedText = el.getAttribute(`data-${currentLocale}`);
     if (translatedText) {
       el.textContent = translatedText;
     }
   });
-  
-  // Update legacy placeholders
-  const textareas = document.querySelectorAll<HTMLTextAreaElement>('textarea[data-es-placeholder][data-en-placeholder]');
-  textareas.forEach(textarea => {
-    const translatedPlaceholder = textarea.getAttribute(`data-${currentLang}-placeholder`);
-    if (translatedPlaceholder) {
-      textarea.placeholder = translatedPlaceholder;
-    }
-  });
-  
-  const inputs = document.querySelectorAll<HTMLInputElement>('input[data-es-placeholder][data-en-placeholder]');
-  inputs.forEach(input => {
-    const translatedPlaceholder = input.getAttribute(`data-${currentLang}-placeholder`);
-    if (translatedPlaceholder) {
-      input.placeholder = translatedPlaceholder;
-    }
-  });
-  
-  // Update language toggle buttons
-  const languageToggle = document.getElementById('languageToggle');
-  const mobileLanguageToggle = document.getElementById('mobileLanguageToggle');
-  
+
+  // Update language toggle buttons text (show destination language)
+  const languageToggle = document.getElementById("languageToggle");
   if (languageToggle) {
-    languageToggle.textContent = `🌐 ${currentLocale === 'es' ? 'ES' : 'EN'}`;
-  }
-  
-  if (mobileLanguageToggle) {
-    mobileLanguageToggle.textContent = `🌐 ${currentLocale === 'es' ? 'ES' : 'EN'}`;
+    languageToggle.textContent = currentLocale === LOCALE.ES ? "ES" : "EN";
   }
 }
 
 /**
  * Initialize i18n on page load
  */
-async function initI18n(): Promise<void> {
+export async function initI18n(): Promise<void> {
+  if (isInitialized) return;
+
   const stored = getStoredLocale();
-  await loadTranslations(stored);
-  updateDOMTranslations();
+  await setLocale(stored);
+  isInitialized = true;
 }
 
 /**
  * Toggle between Spanish and English
  */
-async function toggleLanguage(): Promise<Locale> {
-  const next = currentLocale === 'es' ? 'en' : 'es';
+export async function toggleLanguage(): Promise<Locale> {
+  const next = currentLocale === LOCALE.ES ? LOCALE.EN : LOCALE.ES;
   await setLocale(next);
   return next;
 }
-
-export type { Locale, Translations };
-export { initI18n, setLocale, toggleLanguage, t, getLocale, updateDOMTranslations };

@@ -4,9 +4,11 @@
  * and system preference detection
  */
 
-type Theme = 'light' | 'dark';
+import { getLocale, t } from "./i18n";
 
-const STORAGE_KEY = 'portfolio-theme';
+type Theme = "light" | "dark";
+
+const STORAGE_KEY = "portfolio-theme";
 
 /**
  * Get the stored theme from localStorage
@@ -14,31 +16,34 @@ const STORAGE_KEY = 'portfolio-theme';
  */
 function getStoredTheme(): Theme {
   const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === 'light' || stored === 'dark') {
+  if (stored === "light" || stored === "dark") {
     return stored;
   }
-  
+
   // Fallback to system preference
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return 'dark';
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    return "dark";
   }
-  
-  return 'light';
+
+  return "light";
 }
 
 /**
  * Get current theme (reflects what's applied to the DOM)
  */
 function getTheme(): Theme {
-  const current = document.documentElement.getAttribute('data-theme');
-  return (current === 'dark' ? 'dark' : 'light');
+  const current = document.documentElement.getAttribute("data-theme");
+  return current === "dark" ? "dark" : "light";
 }
 
 /**
  * Apply theme to the document
  */
 function applyTheme(theme: Theme): void {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem(STORAGE_KEY, theme);
 }
 
@@ -49,15 +54,15 @@ function applyTheme(theme: Theme): void {
 function initTheme(): void {
   const theme = getStoredTheme();
   applyTheme(theme);
-  
+
   // Listen for system theme changes
   if (window.matchMedia) {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addEventListener('change', (e) => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener("change", (e) => {
       // Only auto-switch if user hasn't set a preference
       const stored = localStorage.getItem(STORAGE_KEY);
       if (!stored) {
-        applyTheme(e.matches ? 'dark' : 'light');
+        applyTheme(e.matches ? "dark" : "light");
       }
     });
   }
@@ -69,10 +74,41 @@ function initTheme(): void {
  */
 function toggleTheme(): Theme {
   const current = getTheme();
-  const next = current === 'light' ? 'dark' : 'light';
+  const next = current === "light" ? "dark" : "light";
   applyTheme(next);
   return next;
 }
 
+/**
+ * Update theme toggle button UI
+ */
+function updateThemeToggleUI(): void {
+  const themeBtn = document.getElementById("themeToggle");
+  if (themeBtn) {
+    const currentTheme = getTheme();
+    const locale = getLocale();
+
+    if (locale === "es") {
+      themeBtn.textContent = currentTheme === "dark" ? "OSCURO" : "CLARO";
+    } else {
+      themeBtn.textContent = currentTheme === "dark" ? "DARK" : "LIGHT";
+    }
+
+    themeBtn.setAttribute(
+      "aria-label",
+      currentTheme === "dark"
+        ? t("theme.switch.light")
+        : t("theme.switch.dark"),
+    );
+  }
+}
+
 export type { Theme };
-export { initTheme, toggleTheme, getTheme, getStoredTheme, applyTheme };
+export {
+  initTheme,
+  toggleTheme,
+  getTheme,
+  getStoredTheme,
+  applyTheme,
+  updateThemeToggleUI,
+};

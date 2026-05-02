@@ -15,6 +15,6 @@ export interface ContactFormData {
 export interface EmailResponse {
     success: boolean;
     message: string;
-    response?: any;
-    error?: any;
+    response?: unknown;
+    error?: unknown;
 }

@@ -5,17 +5,17 @@ export class FormValidator {
     const errors: string[] = [];
 
     if (!data.name.trim()) {
-      errors.push('El nombre es requerido');
+      errors.push('form.validation.name');
     }
 
     if (!data.email.trim()) {
-      errors.push('El email es requerido');
+      errors.push('form.validation.email.required');
     } else if (!this.isValidEmail(data.email)) {
-      errors.push('El email no es válido');
+      errors.push('form.validation.email.invalid');
     }
 
     if (!data.message.trim()) {
-      errors.push('El mensaje es requerido');
+      errors.push('form.validation.message');
     }
 
     return {
