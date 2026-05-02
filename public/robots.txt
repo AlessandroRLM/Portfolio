@@ -1,0 +1,9 @@
+# Robots.txt for alessandrolopez.dev
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://alessandrolopez.dev/sitemap.xml

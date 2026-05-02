@@ -1,0 +1,114 @@
+{
+  "nav.fortalezas": "01 Strengths",
+  "nav.habilidades": "02 Skills",
+  "nav.softskills": "03 Soft Skills",
+  "nav.valor": "04 Value",
+  "nav.experiencia": "05 Experience",
+  "nav.proyectos": "06 Projects",
+  "nav.contacto": "07 Contact",
+  "nav.menu": "MENU",
+
+  "hero.rol": "Civil Computer Engineer",
+  "hero.ubicacion": "Santiago, Chile",
+  "hero.ubicacion.label": "Location",
+  "hero.rol.label": "Role",
+  "hero.title": "Civil Computer Engineer",
+  "hero.lede": "I build digital products that solve real business problems. Specialized in ERP systems, mobile apps, and scalable architectures.",
+
+  "contact.linkedin": "LinkedIn",
+  "contact.github": "GitHub",
+  "contact.resume": "Resume",
+  "contact.email": "alessandro.lopez.medina1@gmail.com",
+  "contact.location": "Chile",
+
+  "strengths.title": "- Strengths",
+  "strengths.subtitle": "Three pillars.",
+
+  "strength.analytical.title": "Analytical thinking",
+  "strength.analytical.description": "I break down complex problems into efficient solutions through structured analysis.",
+
+  "strength.proactivity.title": "Proactivity",
+  "strength.proactivity.description": "I look for ways to optimize processes before problems arise.",
+
+  "strength.learning.title": "Continuous learning",
+  "strength.learning.description": "I stay updated with industry technologies and explore new tools.",
+
+  "skills.title": "- Technical stack",
+  "skills.subtitle": "Tools I build with.",
+
+  "skills.languages": "Languages",
+  "skills.frameworks": "Frameworks",
+  "skills.technologies": "Technologies",
+  "skills.databases": "Databases",
+  "skills.languages.label": "Languages",
+  "skills.other": "Others",
+  "skills.spanish": "Spanish (Native)",
+  "skills.english": "English (Advanced)",
+
+  "level.advanced": "Advanced",
+  "level.intermediate": "Intermediate",
+  "level.basic": "Basic",
+  "level.native": "Native",
+
+  "softskills.title": "- Soft skills",
+  "softskills.subtitle": "How I work with teams.",
+
+  "softskills.adaptability": "Adaptability",
+  "softskills.empathy": "Empathy",
+  "softskills.teamwork": "Teamwork",
+  "softskills.communication": "Effective communication",
+
+  "value.title": "- Value proposition",
+  "value.subtitle": "What I bring to the team.",
+
+  "value.optimize": "Process optimization",
+  "value.optimize.desc": "ERP systems that automate operations and reduce friction.",
+
+  "value.digital": "Digital experiences",
+  "value.digital.desc": "Web and mobile applications with a focus on usability.",
+
+  "value.complex": "Complex problems",
+  "value.complex.desc": "Translating ambiguous requirements into concrete technical solutions.",
+
+  "experience.title": "- Experience",
+  "experience.subtitle": "Where I have worked.",
+  "experience.present": "Present",
+  "experience.ironside.role": "Software Engineer",
+  "experience.ironside.desc": "Development and optimization of custom modules for Odoo ERP",
+
+  "projects.title": "- Projects",
+  "projects.subtitle": "Selected projects.",
+  "projects.technologies": "Technologies:",
+
+  "project.bazar.title": "ERP System — Bazar Matías",
+  "project.bazar.description": "Management system with inventory, sales, suppliers, and administration modules.",
+
+  "project.wave.title": "Wave — Music platform",
+  "project.wave.description": "Multi-platform music streaming with own backend.",
+
+  "project.rceua.title": "Simulated Clinical Record",
+  "project.rceua.description": "Educational tool for medical students.",
+
+  "contact.title": "- Contact",
+  "contact.subtitle": "Let's work together.",
+  "contact.lede": "Tell me about your project or just say hi.",
+  "contact.project.mark": "project",
+
+  "form.name": "Name",
+  "form.name.placeholder": "John Doe",
+  "form.email": "Email",
+  "form.email.placeholder": "john@company.com",
+  "form.message": "Message",
+  "form.message.placeholder": "Your message here...",
+  "form.submit": "Send",
+  "form.sending": "Sending...",
+
+  "form.success": "Message sent",
+  "form.error": "Error sending",
+
+  "theme.switch.light": "Switch to light theme",
+  "theme.switch.dark": "Switch to dark theme",
+
+  "footer.hablemos": "Let's talk",
+  "footer.rights": "All rights reserved"
+}

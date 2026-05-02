@@ -1,0 +1,116 @@
+{
+  "nav.fortalezas": "01 Fortalezas",
+  "nav.habilidades": "02 Skills",
+  "nav.softskills": "03 Soft Skills",
+  "nav.valor": "04 Valor",
+  "nav.experiencia": "05 Experiencia",
+  "nav.proyectos": "06 Proyectos",
+  "nav.contacto": "07 Contacto",
+  "nav.menu": "MENÚ",
+
+  "hero.rol": "Ingeniero Civil en Informática",
+  "hero.ubicacion": "Santiago, Chile",
+  "hero.ubicacion.label": "Ubicación",
+  "hero.rol.label": "Rol",
+  "hero.title": "Ingeniero Civil en Informática",
+  "hero.lede": "Construyo productos digitales que resuelven problemas reales de negocio. Me especializo en ERP, aplicaciones móviles y arquitecturas escalables.",
+
+  "contact.linkedin": "LinkedIn",
+  "contact.github": "GitHub",
+  "contact.resume": "Currículum",
+  "contact.email": "alessandro.lopez.medina1@gmail.com",
+  "contact.location": "Chile",
+
+  "strengths.title": "- Fortalezas",
+  "strengths.subtitle": "Tres pilares.",
+
+  "strength.analytical.title": "Pensamiento analítico",
+  "strength.analytical.description": "Descompongo problemas complejos en soluciones eficientes mediante análisis estructurado.",
+
+  "strength.proactivity.title": "Proactividad",
+  "strength.proactivity.description": "Busco maneras de optimizar procesos antes de que los problemas se presenten.",
+
+  "strength.learning.title": "Aprendizaje continuo",
+  "strength.learning.description": "Me mantengo actualizado con las tecnologías del sector y exploro nuevas herramientas.",
+
+  "skills.title": "- Stack técnico",
+  "skills.subtitle": "Herramientas con las que construyo.",
+
+  "skills.languages": "Lenguajes",
+  "skills.frameworks": "Frameworks",
+  "skills.technologies": "Tecnologías",
+  "skills.databases": "Bases de Datos",
+  "skills.languages.label": "Idiomas",
+  "skills.other": "Otros",
+  "skills.spanish": "Español (Nativo)",
+  "skills.english": "Inglés (Avanzado)",
+
+  "level.advanced": "Avanzado",
+  "level.intermediate": "Intermedio",
+  "level.basic": "Básico",
+  "level.native": "Nativo",
+
+  "softskills.title": "- Soft skills",
+  "softskills.subtitle": "Cómo trabajo con equipos.",
+
+  "softskills.adaptability": "Adaptabilidad",
+  "softskills.empathy": "Empatía",
+  "softskills.teamwork": "Trabajo en equipo",
+  "softskills.communication": "Comunicación efectiva",
+
+  "value.title": "- Propuesta de valor",
+  "value.subtitle": "Qué aporto al equipo.",
+
+  "value.optimize": "Optimización de procesos",
+  "value.optimize.desc": "Sistemas ERP que automatizan operaciones y reducen fricción.",
+
+  "value.digital": "Experiencias digitales",
+  "value.digital.desc": "Aplicaciones web y móviles con foco en usabilidad.",
+
+  "value.complex": "Problemas complejos",
+  "value.complex.desc": "Traducir requisitos ambiguos en soluciones técnicas concretas.",
+
+  "experience.title": "- Experiencia",
+  "experience.subtitle": "Dónde he trabajado.",
+  "experience.present": "Presente",
+  "experience.ironside.role": "Ingeniero de Software",
+  "experience.ironside.desc": "Desarrollo y optimización de módulos personalizados para Odoo ERP",
+
+  "projects.title": "- Proyectos",
+  "projects.subtitle": "Proyectos seleccionados.",
+  "projects.technologies": "Tecnologías:",
+
+  "project.bazar.title": "Sistema ERP — Bazar Matías",
+  "project.bazar.description": "Sistema de gestión con módulos de inventario, ventas, proveedores y administración.",
+
+  "project.wave.title": "Wave — Plataforma musical",
+  "project.wave.description": "Streaming musical multiplataforma con backend propio.",
+
+  "project.rceua.title": "Registro Clínico Simulado",
+  "project.rceua.description": "Herramienta educativa para estudiantes de medicina.",
+
+  "contact.title": "- Contacto",
+  "contact.subtitle": "Trabajemos juntos.",
+  "contact.lede": "Cuéntame sobre tu proyecto o simplemente salúdame.",
+  "contact.project.mark": "proyecto",
+
+  "form.name": "Nombre",
+  "form.name.placeholder": "Juan Pérez",
+  "form.email": "Email",
+  "form.email.placeholder": "juan@empresa.com",
+  "form.message": "Mensaje",
+  "form.message.placeholder": "Tu mensaje aquí...",
+  "form.submit": "Enviar",
+  "form.sending": "Enviando...",
+
+  "form.validation.name": "El nombre es requerido",
+  "form.validation.email.required": "El email es requerido",
+  "form.validation.email.invalid": "El email no es válido",
+  "form.validation.message": "El mensaje es requerido",
+
+  "form.success": "Mensaje enviado",
+  "form.error": "Error al enviar",
+
+  "footer.hablemos": "Hablemos",
+  "footer.rights": "Todos los derechos reservados"
+}

@@ -1,0 +1,26 @@
+:root {
+  --bg: #fafaf7;
+  --fg: #0a0a0a;
+  --fg-2: #2a2a28;
+  --fg-3: #6a6a66;
+  --fg-4: #a8a8a2;
+  --rule: #0a0a0a24;
+  --surface: #ffffff;
+
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: "Inter Tight", system-ui, -apple-system, sans-serif;
+
+  --maxw: 1680px;
+  --gutter: 12px;
+  --pad-x: 16px;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --fg: #fafaf7;
+  --fg-2: #c8c6c0;
+  --fg-3: #8a8884;
+  --fg-4: #55534e;
+  --rule: #fafaf71f;
+  --surface: #141413;
+}

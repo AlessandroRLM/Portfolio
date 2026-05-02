@@ -1,162 +1,94 @@
-import { ContactForm } from "./components/contactForm";
+/**
+ * Main entry point for Portfolio
+ * Initializes all modules: theme, i18n, reveal, contact form
+ */
 
-interface LanguageState {
-    currentLanguage: 'es' | 'en';
+import './styles/styles.css';
+
+import { initTheme, toggleTheme, updateThemeToggleUI } from './lib/theme';
+import { initI18n, toggleLanguage } from './lib/i18n';
+import { initReveal } from './lib/reveal';
+import { ContactForm } from './components/contactForm';
+
+/**
+ * Initialize all application modules
+ */
+async function initApp(): Promise<void> {
+  // Initialize theme (synchronous, runs first to avoid flash)
+  initTheme();
+
+  // Initialize i18n (async, loads translations)
+  await initI18n();
+
+  // Initialize reveal animations
+  initReveal();
+
+  // Initialize contact form
+  new ContactForm();
+
+  // Wire up UI interactions
+  wireUpEventListeners();
 }
 
-const languageState: LanguageState = {
-    currentLanguage: 'es'
-};
+/**
+ * Wire up all event listeners for navigation, theme, language
+ */
+function wireUpEventListeners(): void {
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navContent = document.querySelector('.nav-content');
 
-function switchLanguage() {
-    // Toggle language
-    languageState.currentLanguage = languageState.currentLanguage === 'es' ? 'en' : 'es';
-    
-    // Apply the language changes
-    applyLanguage();
-    
-    // Save language preference to localStorage
-    localStorage.setItem('preferredLanguage', languageState.currentLanguage);
-}
+  const closeMenu = () => {
+    navContent?.classList.remove('is-open');
+  };
 
-// Function to apply the current language state to the UI
-function applyLanguage() {
-    const currentLang = languageState.currentLanguage;
-    
-    // Update language toggle buttons
-    const languageToggle = document.getElementById('languageToggle');
-    const mobileLanguageToggle = document.getElementById('mobileLanguageToggle');
-    
-    if (languageToggle) {
-        languageToggle.textContent = `🌐 ${currentLang === 'es' ? 'ES' : 'EN'}`;
-    }
-    
-    if (mobileLanguageToggle) {
-        mobileLanguageToggle.textContent = `🌐 ${currentLang === 'es' ? 'ES' : 'EN'}`;
-    }
-    
-    // Update all elements with data-es and data-en attributes
-    const elementsWithTranslation = document.querySelectorAll('[data-es][data-en]');
-    elementsWithTranslation.forEach(element => {
-        const translatedText = element.getAttribute(`data-${currentLang}`);
-        if (translatedText) {
-            if (element.tagName === 'SPAN' && element.parentElement) {
-                element.textContent = translatedText;
-            } else {
-                element.textContent = translatedText;
-            }
-        }
-    });
-    
-    // Update textarea placeholders
-    const textareas = document.querySelectorAll('textarea[data-es-placeholder][data-en-placeholder]');
-    textareas.forEach(textarea => {
-        const translatedPlaceholder = textarea.getAttribute(`data-${currentLang}-placeholder`);
-        if (translatedPlaceholder) {
-            (textarea as HTMLTextAreaElement).placeholder = translatedPlaceholder;
-        }
-    });
-    
-    // Update document language attribute
-    document.documentElement.lang = currentLang;
+  menuToggle?.addEventListener('click', () => {
+    navContent?.classList.toggle('is-open');
+  });
 
-    // Update resume download link
-    const resumeDownloadLink = document.getElementById('resume-download-link');
-    if (resumeDownloadLink) {
-        if (currentLang === 'es') {
-            resumeDownloadLink.setAttribute('href', './public/Alessandro Lopez CV.pdf');
-        } else {
-            resumeDownloadLink.setAttribute('href', './public/Alessandro Lopez Resume.pdf');
-        }
-    }
-}
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle?.addEventListener('click', () => {
+    toggleTheme();
+    updateThemeToggleUI();
+  });
 
-document.addEventListener('DOMContentLoaded', function () {
-    new ContactForm();
-    
-    // Load saved language preference if available
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    if (savedLanguage === 'en') {
-        languageState.currentLanguage = 'en';
-        applyLanguage();
-    }
-    
-    // Set up language toggle buttons
-    const languageToggle = document.getElementById('languageToggle');
-    const mobileLanguageToggle = document.getElementById('mobileLanguageToggle');
-    
-    languageToggle?.addEventListener('click', switchLanguage);
-    mobileLanguageToggle?.addEventListener('click', switchLanguage);
+  // Language toggle
+  const languageToggle = document.getElementById('languageToggle');
 
-    const navbar = document.getElementById('navbar');
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  languageToggle?.addEventListener('click', async () => {
+    await toggleLanguage();
+    updateThemeToggleUI();
+  });
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            navbar?.classList.add('scrolled');
-        } else {
-            navbar?.classList.remove('scrolled');
-        }
-    });
+  // Smooth scrolling for nav links
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    // Mobile menu toggle
-    mobileMenuToggle?.addEventListener('click', function () {
-        mobileMenuToggle?.classList.toggle('active');
-        mobileMenu?.classList.toggle('active');
-    });
+      // Close mobile menu if open
+      closeMenu();
 
-    // Smooth scrolling and active link highlighting
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
-            if (!targetId) return;
-            const targetSection = document.querySelector(targetId);
+      const href = link.getAttribute('href');
+      if (!href) return;
 
-            if (targetSection) {
-                const offsetTop = (targetSection as HTMLElement).offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Close mobile menu after click
-            mobileMenuToggle?.classList.remove('active');
-            mobileMenu?.classList.remove('active');
+      const targetSection = document.querySelector(href);
+      if (targetSection) {
+        const offsetTop = (targetSection as HTMLElement).offsetTop - 20;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
         });
+      }
     });
+  });
+}
 
-    // Highlight active section on scroll
-    window.addEventListener('scroll', function () {
-        const sections = document.querySelectorAll<HTMLElement>('.scroll-offset');
-        const scrollPos = window.scrollY + 100;
-
-
-        sections.forEach(section => {
-            const sectionTop = (section as HTMLElement).offsetTop;
-            const sectionHeight = (section as HTMLElement).offsetHeight;
-            const sectionId = (section as HTMLElement).getAttribute('id');
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                // Remove active class from all links
-                navLinks.forEach(link => link.classList.remove('active'));
-
-                // Add active class to current section links
-                const activeLinks = document.querySelectorAll(`[href="#${sectionId}"]`);
-                activeLinks.forEach(link => link.classList.add('active'));
-            }
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!navbar?.contains(e.target as Node)) {
-            mobileMenuToggle?.classList.remove('active');
-            mobileMenu?.classList.remove('active');
-        }
-    });
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  initApp().then(() => {
+    // Initial UI updates after i18n loads
+    updateThemeToggleUI();
+  });
 });

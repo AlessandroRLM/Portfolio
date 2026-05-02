@@ -37,11 +37,14 @@ export class EmailService {
                 message: 'Email enviado correctamente',
                 response
             };
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('Error al enviar email:', error);
+            const errorMessage = error instanceof Error ? error.message : String(error);
+            const emailjsError = error as { text?: string };
+            
             return {
                 success: false,
-                message: `Error al enviar el email: ${error.text || error.message}`,
+                message: `Error al enviar el email: ${emailjsError.text || errorMessage}`,
                 error
             };
         }

@@ -1,544 +1,558 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alessandro López Medina - Portfolio</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./src/styles/styles.css">
-</head>
+    <!-- Primary Meta Tags -->
+    <title>
+      Alessandro López Medina — Ingeniero Civil en Informática — Portfolio
+    </title>
+    <meta
+      name="title"
+      content="Alessandro López Medina — Ingeniero Civil en Informática — Portfolio"
+    />
+    <meta
+      name="description"
+      content="Ingeniero Civil en Informática especializado en desarrollo web, aplicaciones y sistemas empresariales. Stack: Python, TypeScript, Django, React, Flutter."
+    />
+    <meta name="author" content="Alessandro López Medina" />
+    <meta
+      name="keywords"
+      content="portfolio, developer, software engineer, Python, TypeScript, Django, React, Flutter, PostgreSQL, full-stack, Chile"
+    />
 
-<body>
-  <!-- Mensaje de confirmación -->
-  <div class="form-message" id="formMessage"></div>
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo">AlessandroLM</a>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alessandrolopez.dev/" />
+    <meta property="og:title" content="Alessandro López Medina — Portfolio" />
+    <meta
+      property="og:description"
+      content="Ingeniero Civil en Informática especializado en desarrollo web y aplicaciones modernas."
+    />
+    <meta
+      property="og:image"
+      content="https://alessandrolopez.dev/og-image.png"
+    />
 
-      <ul class="nav-menu">
-        <li><a href="#inicio" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a></li>
-        <li><a href="#fortalezas" class="nav-link" data-es="Fortalezas" data-en="Strengths">Fortalezas</a></li>
-        <li><a href="#habilidades" class="nav-link" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
-        <li><a href="#proyectos" class="nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
-        <li><a href="#contacto" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a></li>
-        <li><button id="languageToggle" class="language-toggle">🌐 ES</button></li>
-      </ul>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AlessandroRLM" />
+    <meta name="twitter:title" content="Alessandro López Medina — Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Ingeniero Civil en Informática especializado en desarrollo web y aplicaciones modernas."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alessandrolopez.dev/og-image.png"
+    />
 
-      <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </div>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alessandrolopez.dev/" />
 
-      <div class="mobile-menu" id="mobile-menu">
-        <a href="#inicio" class="mobile-nav-link" data-es="Inicio" data-en="Home">Inicio</a>
-        <a href="#fortalezas" class="mobile-nav-link" data-es="Fortalezas" data-en="Strengths">Fortalezas</a>
-        <a href="#habilidades" class="mobile-nav-link" data-es="Habilidades" data-en="Skills">Habilidades</a>
-        <a href="#proyectos" class="mobile-nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a>
-        <a href="#contacto" class="mobile-nav-link" data-es="Contacto" data-en="Contact">Contacto</a>
-        <button id="mobileLanguageToggle" class="language-toggle mobile">🌐 ES</button>
-      </div>
-    </div>
-  </nav>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <div id="app">
-    <div class="container">
-      <!-- Header Section -->
-      <header class="header scroll-offset" id="inicio">
-        <div class="header-content">
-          <div class="profile-image">
-            <div class="status-indicator"></div>
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alessandro López Medina",
+        "jobTitle": "Ingeniero Civil en Informática",
+        "url": "https://alessandrolopez.dev",
+        "email": "alessandro.lopez.medina1@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chile",
+          "addressCountry": "CL"
+        },
+        "sameAs": [
+          "https://github.com/AlessandroRLM",
+          "https://www.linkedin.com/in/alessandro-l%C3%B3pez-medina-559393333/"
+        ],
+        "knowsAbout": [
+          "Python",
+          "TypeScript",
+          "Django",
+          "Django REST Framework",
+          "React",
+          "Flutter",
+          "PostgreSQL",
+          "Docker",
+          "AWS"
+        ]
+      }
+    </script>
+
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+  </head>
+
+  <body data-theme="light" data-grid="on">
+    <!-- Form message container -->
+    <div class="form-message" id="formMessage"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a href="#inicio" class="nav-logo"><span>A</span>lessandro LM.</a>
+
+        <button id="menuToggle" class="nav-toggle" data-i18n="nav.menu">
+          MENU
+        </button>
+
+        <div class="nav-content">
+          <div class="nav-sec">
+            <a href="#fortalezas" data-i18n="nav.fortalezas">01 Fortalezas</a>
+            <a href="#habilidades" data-i18n="nav.habilidades">02 Skills</a>
+            <a href="#softskills" data-i18n="nav.softskills">03 Soft Skills</a>
+            <a href="#valor" data-i18n="nav.valor">04 Valor</a>
+            <a href="#experiencia" data-i18n="nav.experiencia"
+              >05 Experiencia</a
+            >
+            <a href="#proyectos" data-i18n="nav.proyectos">06 Proyectos</a>
+            <a href="#contacto" data-i18n="nav.contacto">07 Contacto</a>
           </div>
-
-          <div class="profile-info">
-            <h1 class="name">Alessandro López Medina</h1>
-            <p class="title" data-es="Ingeniero Civil en Informática" data-en="Civil Computer Engineer">Ingeniero Civil
-              en Informática</p>
-
-            <div class="contact-info">
-              <a href="https://www.linkedin.com/in/alessandro-lópez-medina-559393333/"
-                class="contact-item color-linkedin" target="_blank">
-                <img src="./public/linkedin.svg" class="svg-icon" alt="LinkedIn"> LinkedIn
-              </a>
-              <a href="https://github.com/AlessandroRLM" class="contact-item color-github" target="_blank">
-                <img src="./public/github.svg" class="svg-icon" alt="GitHub"> GitHub
-              </a>
-              <a id="resume-download-link-disabled" class="contact-item" target="_blank">
-                <img src="./public/resume.svg" class="svg-icon" alt="Resume"> 
-                <span data-es="Currículum" data-en="Resume">Currículum</span>
-              </a>
-            </div>
-
-            <div class="contact-info">
-              <div class="contact-item">
-                ✉️ alessandro.lopez.medina1@gmail.com
-              </div>
-              <div class="contact-item">
-                📍 Chile
-              </div>
-            </div>
-
+          <div class="nav-ctrl">
+            <button id="languageToggle">ES</button>
+            <span class="sep">|</span>
+            <button id="themeToggle">CLARO</button>
           </div>
         </div>
-      </header>
+      </div>
+    </nav>
 
-      <!-- Main Content -->
-      <main class="main-content">
-        <!-- Strengths Section -->
-        <section class="section scroll-offset" id="fortalezas">
-          <div class="section-header">
-            <div class="section-icon" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
-              🚀
-            </div>
-            <div>
-              <h2 class="section-title" data-es="Fortalezas Profesionales" data-en="Professional Strengths">Fortalezas
-                Profesionales</h2>
-              <p class="section-subtitle"
-                data-es="Estas son las competencias que me definen como profesional y que aporto a cada proyecto"
-                data-en="These are the competencies that define me as a professional and that I bring to each project">
-                Estas son las competencias que me definen como profesional y que aporto a cada proyecto</p>
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero wrap reveal" id="inicio">
+      <div class="hero-row1">
+        <div class="cell">
+          <span class="item-key" data-i18n="hero.rol.label">Rol</span>
+          <span class="item-val" data-i18n="hero.rol"
+            >Ingeniero Civil en Informática</span
+          >
+        </div>
+        <div class="cell">
+          <span class="item-key" data-i18n="hero.ubicacion.label"
+            >Ubicación</span
+          >
+          <span class="item-val" data-i18n="hero.ubicacion"
+            >Santiago, Chile</span
+          >
+        </div>
+      </div>
 
-          <div class="strengths-grid">
-            <div class="strength-card">
-              <div class="strength-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-                🧠
-              </div>
-              <h3 class="strength-title" data-es="Pensamiento Analítico" data-en="Analytical Thinking">Pensamiento
-                Analítico</h3>
-              <p class="strength-description"
-                data-es="Capacidad excepcional para descomponer problemas complejos y encontrar soluciones eficientes mediante análisis estructurado."
-                data-en="Exceptional ability to break down complex problems and find efficient solutions through structured analysis.">
-                Capacidad excepcional para descomponer problemas complejos y encontrar soluciones eficientes mediante
-                análisis estructurado.</p>
-            </div>
+      <h1 class="hero-big reveal">
+        <span class="thin"> Alessandro </span>
+        <div style="margin-top: 16px">López<span class="dot"></span>Medina</div>
+      </h1>
 
-            <div class="strength-card">
-              <div class="strength-icon" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
-                💡
-              </div>
-              <h3 class="strength-title" data-es="Proactividad e Innovación" data-en="Proactivity and Innovation">
-                Proactividad e Innovación</h3>
-              <p class="strength-description"
-                data-es="Siempre busco maneras de optimizar procesos y implementar mejoras continuas antes de que se presenten problemas."
-                data-en="I always look for ways to optimize processes and implement continuous improvements before problems arise.">
-                Siempre busco maneras de optimizar procesos y implementar mejoras continuas antes de que se presenten
-                problemas.</p>
-            </div>
+      <div class="hero-meta reveal">
+        <div class="hero-lede" data-i18n="hero.lede">
+          Construyo productos digitales que resuelven problemas reales de
+          negocio. Me especializo en ERP, aplicaciones móviles y arquitecturas
+          escalables.
+        </div>
+      </div>
+    </section>
 
-            <div class="strength-card">
-              <div class="strength-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
-                🎓
-              </div>
-              <h3 class="strength-title" data-es="Entusiasmo por el Aprendizaje" data-en="Enthusiasm for Learning">
-                Entusiasmo por el Aprendizaje</h3>
-              <p class="strength-description"
-                data-es="Pasión constante por adquirir nuevos conocimientos y mantenerme actualizado con las últimas tecnologías del sector."
-                data-en="Constant passion for acquiring new knowledge and keeping up to date with the latest technologies in the sector.">
-                Pasión constante por adquirir nuevos conocimientos y mantenerme actualizado con las últimas tecnologías
-                del sector.</p>
-            </div>
-          </div>
-        </section>
+    <!-- Strengths Section -->
+    <section class="wrap reveal" id="fortalezas">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="strengths.title">- Fortalezas</span>
+          <span class="big">01</span>
+        </div>
+        <span class="section-title" data-i18n="strengths.subtitle"
+          >Tres pilares.</span
+        >
+      </div>
 
-        <!-- Technical Skills Section -->
-        <section class="section scroll-offset" id="habilidades">
-          <div class="section-header">
-            <div class="section-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
-              💻
-            </div>
-            <div>
-              <h2 class="section-title" data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas
-              </h2>
-              <p class="section-subtitle"
-                data-es="Stack tecnológico y herramientas que domino para crear soluciones robustas"
-                data-en="Technological stack and tools that I master to create robust solutions">Stack tecnológico y
-                herramientas que domino para crear soluciones robustas</p>
-            </div>
-          </div>
-
-          <div class="skills-grid">
-            <div class="skill-category">
-              <div class="category-header">
-                <div class="category-icon">💻</div>
-                <h3 class="category-title" data-es="Lenguajes de Programación" data-en="Programming Languages">Lenguajes
-                  de Programación</h3>
-              </div>
-
-              <div class="skill-item">
-                <span class="skill-name">Python</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">TypeScript</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Dart</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Java</span>
-                <span class="skill-level level-basic" data-es="Básico" data-en="Basic">Básico</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="category-header">
-                <div class="category-icon">🌐</div>
-                <h3 class="category-title">
-                  Frameworks</h3>
-              </div>
-
-              <div class="skill-item">
-                <span class="skill-name">Django/DRF</span>
-                <span class="skill-level level-advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">React + TanStack</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Flutter</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Express.js</span>
-                <span class="skill-level level-intermediate" data-es="Intermedio"
-                  data-en="Intermediate">Intermedio</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="category-header">
-                <div class="category-icon">🖥️</div>
-                <h3 class="category-title" data-es="Tecnologías" data-en="Technologies">
-                  Tecnologías
-                </h3>
-              </div>
-
-              <div class="skill-item">
-                <span class="skill-name">HTML/CSS</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Git</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Docker</span>
-                <span class="skill-level level-intermediate" data-es="Intermedio"
-                  data-en="Intermediate">Intermedio</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Supabase</span>
-                <span class="skill-level level-basic" data-es="Básico" data-en="Basic">Básico</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="category-header">
-                <div class="category-icon">🗄️</div>
-                <h3 class="category-title" data-es="Bases de Datos & Cloud" data-en="Databases & Cloud">Bases de Datos &
-                  Cloud</h3>
-              </div>
-
-              <div class="skill-item">
-                <span class="skill-name">PostgreSQL</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">MongoDB</span>
-                <span class="skill-level level-intermediate" data-es="Intermedio"
-                  data-en="Intermediate">Intermedio</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">AWS S3</span>
-                <span class="skill-level level-basic" data-es="Básico" data-en="Basic">Básico</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="category-header">
-                <div class="category-icon">🗣️</div>
-                <h3 class="category-title" data-es="Idiomas" data-en="Languages">Idiomas</h3>
-              </div>
-
-              <div class="skill-item">
-                <span class="skill-name">Español</span>
-                <span class="skill-level level-advanced" data-es="Nativo" data-en="Native">Nativo</span>
-              </div>
-              <div class="skill-item">
-                <span class="skill-name">Inglés</span>
-                <span class="skill-level level-advanced" data-es="Avanzado" data-en="Advanced">Avanzado</span>
-              </div>
-            </div>
-        </section>
-
-        <!-- Soft Skills Section -->
-        <section class="section">
-          <div class="section-header">
-            <div class="section-icon" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-              🔄
-            </div>
-            <div>
-              <h2 class="section-title" data-es="Habilidades Blandas" data-en="Soft Skills">Habilidades Blandas</h2>
-              <p class="section-subtitle"
-                data-es="Competencias interpersonales que facilitan la colaboración y el liderazgo"
-                data-en="Interpersonal skills that facilitate collaboration and leadership">Competencias interpersonales
-                que facilitan la colaboración y el liderazgo</p>
-            </div>
-          </div>
-
-          <div class="soft-skills-container">
-            <div class="soft-skill" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-              <span data-es="🔄 Adaptabilidad" data-en="🔄 Adaptability">🔄 Adaptabilidad</span>
-            </div>
-            <div class="soft-skill" style="background: linear-gradient(135deg, #ec4899, #be185d);">
-              <span data-es="💝 Empatía" data-en="💝 Empathy">💝 Empatía</span>
-            </div>
-            <div class="soft-skill" style="background: linear-gradient(135deg, #10b981, #059669);">
-              <span data-es="🤝 Trabajo en Equipo" data-en="🤝 Teamwork">🤝 Trabajo en Equipo</span>
-            </div>
-            <div class="soft-skill" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
-              <span data-es="💬 Comunicación Efectiva" data-en="💬 Effective Communication">💬 Comunicación
-                Efectiva</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- Value Proposition Section -->
-        <section class="section">
-          <div class="section-header">
-            <div class="section-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
-              ⭐
-            </div>
-            <div>
-              <h2 class="section-title" data-es="Propuesta de Valor" data-en="Value Proposition">Propuesta de Valor</h2>
-              <p class="section-subtitle"
-                data-es="El valor único que aporto a tu organización y cómo puedo impulsar tu crecimiento"
-                data-en="The unique value I bring to your organization and how I can drive your growth">El valor único
-                que aporto a tu organización y cómo puedo impulsar tu crecimiento</p>
-            </div>
-          </div>
-
-          <div class="value-flex">
-            <div class="value-items">
-              <div class="value-item">
-                <div class="value-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
-                  ⚙️
-                </div>
-                <div class="value-content">
-                  <h4 data-es="Optimizo Procesos Empresariales" data-en="I Optimize Business Processes">Optimizo
-                    Procesos Empresariales</h4>
-                  <p data-es="Desarrollo sistemas ERP personalizados que automatizan y mejoran la eficiencia operacional."
-                    data-en="I develop custom ERP systems that automate and improve operational efficiency.">Desarrollo
-                    sistemas ERP personalizados que automatizan y mejoran la eficiencia operacional.</p>
-                </div>
-              </div>
-
-              <div class="value-item">
-                <div class="value-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
-                  📱
-                </div>
-                <div class="value-content">
-                  <h4 data-es="Creo Experiencias Digitales" data-en="I Create Digital Experiences">Creo Experiencias
-                    Digitales</h4>
-                  <p data-es="Desarrollo aplicaciones web y móviles intuitivas que conectan empresas con usuarios."
-                    data-en="I develop intuitive web and mobile applications that connect businesses with users.">
-                    Desarrollo aplicaciones web y móviles intuitivas que conectan empresas con usuarios.</p>
-                </div>
-              </div>
-
-              <div class="value-item">
-                <div class="value-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
-                  🧩
-                </div>
-                <div class="value-content">
-                  <h4 data-es="Resuelvo Desafíos Complejos" data-en="I Solve Complex Challenges">Resuelvo Desafíos
-                    Complejos</h4>
-                  <p data-es="Transformo requisitos complejos en soluciones tecnológicas robustas y escalables."
-                    data-en="I transform complex requirements into robust and scalable technological solutions.">
-                    Transformo requisitos complejos en soluciones tecnológicas robustas y escalables.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section scroll-offset" id="proyectos">
-          <div class="section-header">
-            <div class="section-icon" style="background: linear-gradient(135deg, #f97316, #dc2626);">
-              📂
-            </div>
-            <div>
-              <h2 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">
-                Proyectos Destacados
-              </h2>
-              <p class="section-subtitle"
-                data-es="Descubre algunos de los proyectos destacados en los que he trabajado recientemente."
-                data-en="Discover some of the featured projects I have worked on recently.">
-                Descubre algunos de los proyectos destacados en los que he trabajado recientemente.
-              </p>
-            </div>
-          </div>
-          <div class="projects-section">
-            <div class="projects-grid">
-              <div class="project-card">
-                <img src="public/bazar_matias_erp.webp" alt="Sistema ERP Bazar Matías" class="project-image">
-                <div class="project-info">
-                  <h4 class="project-title" data-es="Sistema ERP - Bazar Matías" data-en="ERP System - Bazar Matías">
-                    Sistema ERP - Bazar Matías</h4>
-                  <p class="project-description"
-                    data-es="Sistema completo de gestión empresarial para bazar con módulos de inventario, ventas, proveedores y administración."
-                    data-en="Complete business management system for bazaar with inventory, sales, suppliers and administration modules.">
-                    Sistema completo de gestión empresarial para bazar con módulos de inventario, ventas, proveedores y
-                    administración.</p>
-                  <div class="project-technologies">
-                    <h5 class="tech-title" data-es="Tecnologías:" data-en="Technologies:">Tecnologías:</h5>
-                    <div class="tech-tags">
-                      <span class="tech-tag">Python DRF</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">React</span>
-                      <span class="tech-tag">TypeScript</span>
-                      <span class="tech-tag">Docker</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-card">
-                <img src="public/wave_app.webp" alt="App Wave - Plataforma Musical" class="project-image">
-                <div class="project-info">
-                  <h4 class="project-title" data-es="App Wave" data-en="Wave App">App Wave</h4>
-                  <p class="project-description"
-                    data-es="Plataforma de streaming musical desarrollada con tecnologías modernas, ofreciendo una experiencia de usuario fluida y atractiva."
-                    data-en="Music streaming platform developed with modern technologies, offering a smooth and attractive user experience.">
-                    Plataforma de streaming musical desarrollada con tecnologías modernas, ofreciendo una experiencia de
-                    usuario fluida y atractiva.</p>
-                  <div class="project-technologies">
-                    <h5 class="tech-title" data-es="Tecnologías:" data-en="Technologies:">Tecnologías:</h5>
-                    <div class="tech-tags">
-                      <span class="tech-tag">Flutter</span>
-                      <span class="tech-tag">Dart</span>
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django DRF</span>
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">AWS S3</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-card">
-                <img src="public/rceua.webp" alt="Simulador Clínico" class="project-image">
-                <div class="project-info">
-                  <h4 class="project-title" data-es="Registro Clínico Electrónico Simulado"
-                    data-en="Simulated Electronic Clinical Record">Registro Clínico Electrónico Simulado</h4>
-                  <p class="project-description"
-                    data-es="Herramienta educativa para estudiantes de medicina que simula registros médicos reales para práctica y aprendizaje."
-                    data-en="Educational tool for medical students that simulates real medical records for practice and learning.">
-                    Herramienta educativa para estudiantes de medicina que simula registros médicos reales para práctica
-                    y aprendizaje.</p>
-                  <div class="project-technologies">
-                    <h5 class="tech-title" data-es="Tecnologías:" data-en="Technologies:">Tecnologías:</h5>
-                    <div class="tech-tags">
-                      <span class="tech-tag">Python</span>
-                      <span class="tech-tag">Django</span>
-                      <span class="tech-tag">JavaScript</span>                      
-                      <span class="tech-tag">PostgreSQL</span>
-                      <span class="tech-tag">Docker</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <!-- Call to Action Section -->
-      <section class="cta-section scroll-offset" id="contacto">
-        <div class="cta-content">
-          <div class="cta-icon">
-            🚀
-          </div>
-
-          <h2 class="cta-title" data-es="Listo para construir el futuro digital"
-            data-en="Ready to build the digital future">Listo para construir el futuro digital</h2>
-          <p class="cta-subtitle" data-es="de tu empresa" data-en="of your company">de tu empresa</p>
-
-          <p class="cta-description"
-            data-es="Transformemos juntos tus ideas en soluciones tecnológicas innovadoras que impulsen el crecimiento y la eficiencia de tu organización."
-            data-en="Let's transform your ideas together into innovative technological solutions that drive the growth and efficiency of your organization.">
-            Transformemos juntos tus ideas en soluciones tecnológicas innovadoras que impulsen
-            el crecimiento y la eficiencia de tu organización.
+      <div class="strengths-grid">
+        <div class="card-i reveal reveal-delay-1">
+          <span class="item-idx">01</span>
+          <h3 class="card-title" data-i18n="strength.analytical.title">
+            Pensamiento analítico
+          </h3>
+          <p class="card-desc" data-i18n="strength.analytical.description">
+            Descompongo problemas complejos en soluciones eficientes mediante
+            análisis estructurado.
           </p>
+        </div>
+        <div class="card-i reveal reveal-delay-2">
+          <span class="item-idx">02</span>
+          <h3 class="card-title" data-i18n="strength.proactivity.title">
+            Proactividad
+          </h3>
+          <p class="card-desc" data-i18n="strength.proactivity.description">
+            Busco maneras de optimizar procesos antes de que los problemas se
+            presenten.
+          </p>
+        </div>
+        <div class="card-i card-active reveal reveal-delay-3">
+          <span class="item-idx">03</span>
+          <h3 class="card-title" data-i18n="strength.learning.title">
+            Aprendizaje continuo
+          </h3>
+          <p class="card-desc" data-i18n="strength.learning.description">
+            Me mantengo actualizado con las tecnologías del sector y exploro
+            nuevas herramientas.
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <!-- Formulario de Contacto -->
-          <div class="contact-form-container">
-            <form class="contact-form" id="contactForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name" data-es="Nombre completo" data-en="Full name">Nombre completo</label>
-                  <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email" data-es="Email" data-en="Email">Email</label>
-                  <input type="email" id="email" name="email" required>
-                </div>
-              </div>
+    <!-- Technical Skills Section -->
+    <section class="wrap reveal" id="habilidades">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="skills.title">- Skills</span>
+          <span class="big">02</span>
+        </div>
+        <span class="section-title" data-i18n="skills.subtitle"
+          >Herramientas con las que construyo.</span
+        >
+      </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="company" data-es="Empresa" data-en="Company">Empresa</label>
-                  <input type="text" id="company" name="company">
-                </div>
-                <div class="form-group">
-                  <label for="phone" data-es="Teléfono" data-en="Phone">Teléfono</label>
-                  <input type="tel" id="phone" name="phone">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message" data-es="Cuéntame sobre tu proyecto" data-en="Tell me about your project">Cuéntame
-                  sobre tu proyecto</label>
-                <textarea id="message" name="message" rows="4"
-                  placeholder="Describe tu proyecto, objetivos, timeline o cualquier detalle importante..."
-                  data-es-placeholder="Describe tu proyecto, objetivos, timeline o cualquier detalle importante..."
-                  data-en-placeholder="Describe your project, objectives, timeline or any important details..."
-                  required></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button type="submit" class="cta-button primary" id="submitBtn">
-                  <span class="btn-text">
-                    <span class="btn-icon">📨</span>
-                    <span data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</span>
-                  </span>
-                  <span class="btn-loading" style="display: none;">
-                    <span class="spinner"></span>
-                    <span data-es="Enviando..." data-en="Sending...">Enviando...</span>
-                  </span>
-                </button>
-              </div>
-
-            </form>
-          </div>
-
-          <div class="cta-footer">
-            <p data-es="💡 ¿Tienes un proyecto en mente? Hablemos y veamos cómo puedo ayudarte a hacerlo realidad"
-              data-en="💡 Do you have a project in mind? Let's talk and see how I can help you make it happen">💡
-              ¿Tienes un proyecto en mente? Hablemos y veamos cómo puedo ayudarte a hacerlo realidad</p>
+      <div class="skills-list">
+        <!-- Row 1 -->
+        <div class="skill-row reveal reveal-delay-1">
+          <span class="skill-idx">01</span>
+          <span class="skill-key" data-i18n="skills.languages">Lenguajes</span>
+          <div class="skill-val">
+            <span>Python</span>
+            <span>TypeScript</span>
+            <span>Dart</span>
+            <span>JavaScript</span>
+            <span>Java</span>
           </div>
         </div>
-      </section>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="module" src="src/main.ts"></script>
-</body>
 
+        <!-- Row 2 -->
+        <div class="skill-row reveal reveal-delay-2">
+          <span class="skill-idx">02</span>
+          <span class="skill-key" data-i18n="skills.frameworks"
+            >Frameworks</span
+          >
+          <div class="skill-val">
+            <span>Django / DRF</span>
+            <span>Odoo</span>
+            <span>React + TanStack</span>
+            <span>Flutter</span>
+            <span>Express.js</span>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="skill-row reveal reveal-delay-3">
+          <span class="skill-idx">03</span>
+          <span class="skill-key" data-i18n="skills.databases"
+            >Bases de Datos</span
+          >
+          <div class="skill-val">
+            <span>PostgreSQL</span>
+            <span>MongoDB</span>
+            <span>Supabase</span>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="skill-row reveal reveal-delay-4">
+          <span class="skill-idx">04</span>
+          <span class="skill-key" data-i18n="skills.other">Otros</span>
+          <div class="skill-val">
+            <span>Docker</span>
+            <span>Git</span>
+            <span>AWS S3</span>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="skill-row reveal reveal-delay-4">
+          <span class="skill-idx">05</span>
+          <span class="skill-key" data-i18n="skills.languages.label"
+            >Idiomas</span
+          >
+          <div class="skill-val">
+            <span data-i18n="skills.spanish">Español (Nativo)</span>
+            <span data-i18n="skills.english">Inglés (Avanzado)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section class="wrap reveal" id="softskills">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="softskills.title">- Soft skills</span>
+          <span class="big">03</span>
+        </div>
+        <span class="section-title" data-i18n="softskills.subtitle"
+          >Cómo trabajo con equipos.</span
+        >
+      </div>
+
+      <div class="soft-rail">
+        <span data-i18n="softskills.adaptability">Adaptabilidad</span>
+        <span data-i18n="softskills.empathy">Empatía</span>
+        <span data-i18n="softskills.teamwork">Trabajo en equipo</span>
+        <span data-i18n="softskills.communication">Comunicación efectiva</span>
+      </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="wrap reveal" id="valor">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="value.title">- Propuesta de valor</span>
+          <span class="big">04</span>
+        </div>
+        <span class="section-title" data-i18n="value.subtitle"
+          >Qué aporto al equipo.</span
+        >
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <span class="letter">A</span>
+          <span class="num">N° 01 / 3</span>
+          <h3 class="card-title" data-i18n="value.optimize">
+            Optimización de procesos
+          </h3>
+          <p class="card-desc" data-i18n="value.optimize.desc">
+            Sistemas ERP que automatizan operaciones y reducen fricción.
+          </p>
+        </div>
+        <div class="value-card card-active reveal reveal-delay-2">
+          <span class="letter">B</span>
+          <span class="num">N° 02 / 3</span>
+          <h3 class="card-title" data-i18n="value.digital">
+            Experiencias digitales
+          </h3>
+          <p class="card-desc" data-i18n="value.digital.desc">
+            Aplicaciones web y móviles con foco en usabilidad.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <span class="letter">C</span>
+          <span class="num">N° 03 / 3</span>
+          <h3 class="card-title" data-i18n="value.complex">
+            Problemas complejos
+          </h3>
+          <p class="card-desc" data-i18n="value.complex.desc">
+            Traducir requisitos ambiguos en soluciones técnicas concretas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="wrap reveal" id="experiencia">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="experience.title">- Experiencia</span>
+          <span class="big">05</span>
+        </div>
+        <span class="section-title" data-i18n="experience.subtitle"
+          >Dónde he trabajado.</span
+        >
+      </div>
+
+      <div class="xp-row reveal">
+        <span class="xp-year"
+          >2025 — <span data-i18n="experience.present">Presente</span></span
+        >
+        <span class="xp-role" data-i18n="experience.ironside.role"
+          >Ingeniero de Software</span
+        >
+        <span class="xp-company">Ironside Fitness</span>
+        <p class="xp-desc" data-i18n="experience.ironside.desc">
+          Desarrollo de módulos personalizados para Odoo ERP
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="wrap reveal" id="proyectos">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="projects.title">- Proyectos</span>
+          <span class="big">06</span>
+        </div>
+        <span class="section-title" data-i18n="projects.subtitle"
+          >Proyectos seleccionados.</span
+        >
+      </div>
+
+      <div class="project-row reveal">
+        <span class="project-year">2025</span>
+        <span class="project-name">
+          <span data-i18n="project.bazar.title"
+            >Sistema ERP — Bazar Matías
+          </span>
+        </span>
+        <p class="project-desc" data-i18n="project.bazar.description">
+          Sistema de gestión con módulos de inventario, ventas, proveedores y
+          administración.
+        </p>
+        <div class="project-stack">
+          <span>Django</span>
+          <span>DRF</span>
+          <span>PostgreSQL</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Docker</span>
+        </div>
+      </div>
+
+      <div class="project-row reveal">
+        <span class="project-year">2025</span>
+        <span class="project-name">
+          <span data-i18n="project.wave.title">
+            Wave — Plataforma musical
+          </span>
+        </span>
+        <p class="project-desc" data-i18n="project.wave.description">
+          Streaming musical multiplataforma con backend propio.
+        </p>
+        <div class="project-stack">
+          <span>Flutter</span>
+          <span>Dart</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
+          <span>AWS S3</span>
+        </div>
+      </div>
+
+      <div class="project-row reveal">
+        <span class="project-year">2024</span>
+        <span class="project-name">
+          <span data-i18n="project.rceua.title">
+            Registro Clínico Simulado
+          </span>
+        </span>
+        <p class="project-desc" data-i18n="project.rceua.description">
+          Herramienta educativa para estudiantes de medicina.
+        </p>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
+          <span>Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="wrap reveal" id="contacto">
+      <div class="section-head">
+        <div class="section-num">
+          <span data-i18n="contact.title">- Contacto</span>
+          <span class="big">07</span>
+        </div>
+        <span class="section-title" data-i18n="contact.subtitle"
+          >Trabajemos juntos.</span
+        >
+      </div>
+
+      <p class="contact-lede">
+        <span data-i18n="contact.lede"
+          >Cuéntame sobre tu proyecto o simplemente salúdame.</span
+        >
+      </p>
+      <a href="mailto:alessandro.lopez.medina1@gmail.com" class="contact-mail"
+        >alessandro.lopez.medina1@gmail.com →</a
+      >
+
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="https://github.com/AlessandroRLM" target="_blank"
+            >GitHub <span class="arr">↗</span></a
+          >
+          <a
+            href="https://www.linkedin.com/in/alessandro-l%C3%B3pez-medina-559393333/"
+            target="_blank"
+            >LinkedIn <span class="arr">↗</span></a
+          >
+          <a href="mailto:alessandro.lopez.medina1@gmail.com"
+            >Email <span class="arr">↗</span></a
+          >
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="contact-field">
+            <label for="name" data-i18n="form.name">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Juan Pérez"
+              data-i18n-placeholder="form.name.placeholder"
+              required
+            />
+          </div>
+
+          <div class="contact-field">
+            <label for="email" data-i18n="form.email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="juan@empresa.com"
+              data-i18n-placeholder="form.email.placeholder"
+              required
+            />
+          </div>
+
+          <div class="contact-field full">
+            <label for="message" data-i18n="form.message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tu mensaje aquí..."
+              data-i18n-placeholder="form.message.placeholder"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-send" id="submitBtn">
+            <span data-i18n="form.submit">Enviar</span>
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrap">
+        <p class="footer-big">
+          <span data-i18n="footer.hablemos">Hablemos</span
+          ><span class="red">.</span>
+        </p>
+        <div class="footer-row">
+          <span>© 2026 Alessandro López Medina</span>
+          <span data-i18n="footer.rights">Todos los derechos reservados</span>
+          <span>Chile</span>
+          <span>v1.0</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="src/main.ts"></script>
+  </body>
 </html>

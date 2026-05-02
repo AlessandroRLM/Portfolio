@@ -1,0 +1,263 @@
+@media (min-width: 640px) {
+  :root {
+    --gutter: 16px;
+    --pad-x: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 20px;
+    --pad-x: 36px;
+  }
+}
+
+/* === SUB-900 SAFETY: shrink everything cleanly === */
+@media (max-width: 900px) {
+  .wrap {
+    padding-inline: var(--pad-x);
+  }
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  section {
+    padding: 40px var(--pad-x);
+  }
+  .hero {
+    padding: 20px var(--pad-x) 28px;
+  }
+  .hero-row1 {
+    font-size: 9px;
+    padding-bottom: 22px;
+    gap: 12px 10px;
+  }
+  .hero-row1 .item-val {
+    font-size: 11px;
+  }
+  .hero-row1 .item-key {
+    font-size: 8px;
+  }
+  .hero-big {
+    font-size: clamp(34px, 11vw, 60px);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+  }
+  .hero-meta {
+    padding: 20px 0 0;
+    gap: 18px;
+  }
+  .hero-side-num .big {
+    font-size: clamp(44px, 12vw, 64px);
+  }
+  .hero-lede {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .section-head {
+    padding-bottom: 22px;
+    gap: 12px;
+  }
+  .section-num {
+    font-size: 10px;
+    gap: 10px;
+  }
+  .section-num .big {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+  .section-title {
+    font-size: clamp(22px, 5.4vw, 32px);
+  }
+
+  /* Card and Row sizes preserved from base as much as possible */
+  .card-i {
+    padding: 24px 0 28px;
+    gap: 12px;
+  }
+  .card-i .card-title {
+    font-size: 24px;
+  }
+  .card-i .card-desc {
+    font-size: 16px;
+  }
+
+  .skill-row {
+    padding: 16px 0;
+    gap: 10px;
+  }
+  .skill-key {
+    font-size: 15px;
+  }
+  .skill-val span {
+    font-size: 12px;
+  }
+  .skill-idx {
+    font-size: 10px;
+  }
+  .soft-rail {
+    font-size: clamp(26px, 8vw, 44px);
+    gap: 0 14px;
+  }
+  .soft-rail span + span::before {
+    width: 5px;
+    height: 5px;
+    margin-right: 14px;
+  }
+  .value-card {
+    padding: 20px 0 28px;
+    gap: 10px;
+  }
+  .value-card .letter {
+    font-size: clamp(40px, 10vw, 56px);
+    top: 12px;
+  }
+  .value-card .card-title {
+    font-size: 20px;
+    padding-right: 50px;
+  }
+  .value-card .card-desc {
+    font-size: 16px;
+  }
+  .value-card .num {
+    font-size: 10px;
+  }
+  .xp-row {
+    padding: 18px 0 20px;
+    gap: 6px;
+  }
+  .xp-role {
+    font-size: 18px;
+  }
+  .xp-company {
+    font-size: 14px;
+  }
+  .xp-desc {
+    font-size: 14px;
+  }
+  .xp-year {
+    font-size: 10px;
+  }
+  .project-row {
+    padding: 20px 0 24px;
+    gap: 8px 14px;
+  }
+  .project-name {
+    font-size: clamp(18px, 4.6vw, 26px);
+  }
+  .project-year {
+    font-size: 10px;
+    padding-top: 4px;
+  }
+  .project-desc {
+    font-size: 15px;
+    padding-top: 6px;
+  }
+  .project-meta {
+    font-size: 10px;
+    padding-top: 2px;
+  }
+  .project-stack {
+    padding-top: 10px;
+  }
+  .project-stack span {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .contact-lede {
+    font-size: clamp(20px, 5.6vw, 28px);
+    margin-bottom: 12px;
+  }
+  .contact-mail {
+    font-size: clamp(13px, 3.8vw, 17px);
+    padding: 8px 0 10px;
+    margin-bottom: 24px;
+  }
+  .contact-grid {
+    padding-top: 18px;
+    gap: 22px;
+  }
+  .contact-links a {
+    padding: 11px 0;
+    font-size: 10px;
+  }
+  .contact-field {
+    padding: 10px 0 8px;
+  }
+  .contact-field input,
+  .contact-field textarea {
+    font-size: 15px;
+  }
+  .contact-field label {
+    font-size: 8px;
+    margin-bottom: 6px;
+  }
+  .contact-send {
+    padding: 16px 18px;
+    font-size: 12px;
+    min-height: 48px;
+    margin-top: 16px;
+  }
+  footer {
+    padding: 36px 0 22px;
+  }
+  .footer-big {
+    font-size: clamp(40px, 14vw, 96px);
+    padding-bottom: 22px;
+    line-height: 0.92;
+  }
+  .footer-row {
+    font-size: 9px;
+    gap: 8px 12px;
+    padding-top: 14px;
+  }
+  .nav-inner {
+    padding: 14px var(--pad-x);
+    gap: 8px;
+  }
+  .nav-logo {
+    font-size: 12px;
+  }
+  .nav-logo b {
+    padding: 1px 5px;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg);
+    border-bottom: 1px solid var(--fg);
+    padding: 32px var(--pad-x);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    z-index: 100;
+  }
+  .nav-content.is-open {
+    display: flex;
+  }
+  .nav-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .nav-sec a {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    width: 100%;
+  }
+  .nav-ctrl {
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    gap: 12px;
+    justify-content: flex-start;
+  }
+  .nav-ctrl button {
+    font-size: 11px;
+  }
+}
