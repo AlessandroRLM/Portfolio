@@ -966,10 +966,25 @@ footer {
 .form-message.success::before {
   content: "✓";
 }
-
 .form-message.error::before {
   content: "✕";
-} /* ===== LANGUAGE/THEME TOGGLES ===== */
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--bg);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 600ms linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== LANGUAGE/THEME TOGGLES ===== */
 .language-toggle,
 .theme-toggle {
   display: inline-flex;

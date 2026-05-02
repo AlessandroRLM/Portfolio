@@ -30,7 +30,10 @@ export class ContactForm {
     const validation = FormValidator.validateForm(formData);
 
     if (!validation.isValid) {
-      this.showMessage(validation.errors.map(err => t(err)).join(", "), "error");
+      this.showMessage(
+        validation.errors.map((err) => t(err)).join(", "),
+        "error",
+      );
       return;
     }
 
@@ -77,10 +80,9 @@ export class ContactForm {
     this.submitBtn.disabled = isLoading;
 
     if (isLoading) {
-      this.submitBtn.innerHTML = `<span data-i18n="form.sending">${t("form.sending")}</span><span>⏳</span>`;
+      this.submitBtn.innerHTML = `<span data-i18n="form.sending">${t("form.sending")}</span><span class="spinner"></span>`;
     } else {
       this.submitBtn.innerHTML = `<span data-i18n="form.submit">${t("form.submit")}</span><span>→</span>`;
     }
   }
 }
-
